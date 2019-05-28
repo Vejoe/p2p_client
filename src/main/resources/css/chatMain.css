@@ -1,0 +1,74 @@
+#left{
+    -fx-background-color:  #1e0f2d;
+}
+#addFriends{
+    -fx-image: url("/icon/addFriend.png");
+    -fx-cursor: pointer;
+}
+#addFriends:hover{
+    -fx-image: url("/icon/addFriend_Hover.png");
+}
+#addGroup{
+    -fx-image: url("/icon/addGroup.png");
+}
+#addGroup:hover{
+    -fx-image: url("/icon/addGroup_Hover.png");
+}
+.TitleButton:hover{
+    -fx-background-color: #E3E3E3;
+}
+#checkFriends{
+    -fx-background-color: #EBEBEB;
+ }
+#ListWindows{
+    -fx-background-color: #E0E0E0;
+}
+.titleClass{
+    -fx-background-color: #F4F4F4;
+}
+#acceptMessage{
+    -fx-background-color: #F9F9F9;
+}
+.list-cell{
+    -fx-padding: 0;
+    -fx-font-family: Arial;
+    -fx-text-fill: black;
+}
+.list-cell:even, .list-cell:odd{
+    -fx-background-color: #E0E0E0;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #C8C8C8 ;
+    -fx-background-insets: 0 ;
+    -fx-text-fill: black;
+}
+.list-cell:filled:hover{
+    -fx-background-color: #E6E6E6 ;
+    -fx-text-fill: black;
+}
+.list-cell:filled:selected:hover {
+    -fx-background-color: #C8C8C8 ;
+}
+#messageList{
+    -fx-padding: 0;
+    -fx-border-color: #E0E0E0;;
+    -fx-background-insets: 0 ;
+    -fx-border-width: 0;
+}
+#friendsList{
+    -fx-padding: 0;
+    -fx-border-color: #E0E0E0;;
+    -fx-background-insets: 0 ;
+    -fx-border-width: 0;
+}
+#detailMessage_sendButton{
+    -fx-text-fill: white;
+    -fx-background-color: #00b4fa;
+    -fx-font-size: 15px;
+}
+#detailMessage_deleteButton{
+    -fx-text-fill: white;
+    -fx-background-color: #ff553c;
+    -fx-font-size: 15px;
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.*?>
+
+<HBox onMouseClicked="#hBoxOnclick" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:id="hBoxItem">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="240.0">
+         <children>
+            <ImageView fx:id="friendImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/jaychou.jpg" />
+               </image>
+               <clip>
+                  <Circle centerX="20" centerY="20" fill="aqua">
+                     <radius>20</radius>
+                  </Circle>
+               </clip>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label fx:id="nickNameLabel" text="Label">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <ImageView fx:id="selectIcon" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/select.png" />
+         </image>
+      </ImageView>
+   </children>
+</HBox>

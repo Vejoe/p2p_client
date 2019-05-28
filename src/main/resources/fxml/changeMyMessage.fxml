@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.shape.Circle?>
+<VBox fx:controller="com.ui.MyMessage.MyMessageController" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="MyImage" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/jaychou.jpg" />
+         </image>
+         <clip>
+            <Circle fx:id="circle" centerX="75" centerY="75" fill="aqua">
+               <radius>75</radius>
+            </Circle>
+         </clip>
+      </ImageView>
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="修改头像" onAction="#changMyImage">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin></Button>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="294.0">
+         <children>
+            <Label text="UserName:">
+               <HBox.margin>
+                  <Insets left="50.0" right="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="UserName" text="UserName" />
+         </children>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
+         <children>
+            <Label text="NickName:">
+               <HBox.margin>
+                  <Insets left="50.0" right="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="NickName" prefHeight="23.0" prefWidth="116.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="修改密码" onAction="#changPassword">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="确定" onAction="#comfirmedMyMessage">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

@@ -1,0 +1,19 @@
+.root{
+    -fx-background-color: #fff;
+}
+.grid-pane{
+    -fx-font-size:20px;
+}
+.ImageView{
+    -fx-alignment: center;
+}
+.button_style{
+    -fx-text-fill: white;
+    -fx-background-color: #00b4fa;
+    -fx-font-size: 15px;
+    -fx-pref-height: 35px;
+    -fx-pref-width: 150px;
+}
+.button_style:hover{
+    -fx-background-color: #23c8fa;
+}

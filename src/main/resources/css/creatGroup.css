@@ -1,0 +1,30 @@
+.submitButton{
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-background-color: #00b4fa;
+}
+.list-cell{
+    -fx-padding: 0;
+    -fx-font-family: Arial;
+    -fx-pref-height: 60px;
+}
+.list-cell:even, .list-cell:odd{
+    -fx-background-color: #E0E0E0;
+}
+.list-cell:selected {
+    -fx-background-color: white;
+}
+.list-cell:empty {
+    -fx-background-color: #E0E0E0;;
+}
+.list-cell:filled:selected {
+    -fx-background-color: #C8C8C8 ;
+    -fx-background-insets: 0 ;
+}
+.list-cell:filled:hover{
+    -fx-background-color: #E6E6E6 ;
+    -fx-text-fill: black;
+}
+.list-cell:filled:selected:hover {
+    -fx-background-color: #C8C8C8 ;
+}

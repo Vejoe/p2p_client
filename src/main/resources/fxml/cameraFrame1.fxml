@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.shape.Circle?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane id="FirstPane" fx:id="cameraPaneFirst" prefHeight="500.0" prefWidth="400.0">
+         <children>
+            <ImageView id="cameraUserImage" fx:id="cameraUserImage" fitHeight="200.0" fitWidth="200.0" layoutX="100.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/jaychou.jpg" />
+               </image>
+               <clip>
+                  <Circle fx:id="circle" centerX="100" centerY="100" fill="aqua">
+                     <radius>100</radius>
+                  </Circle>
+               </clip>
+            </ImageView>
+            <ImageView id="acceptIcon" fx:id="acceptIcon" fitHeight="55.0" fitWidth="55.0" layoutX="73.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/acceptCamera.png" />
+               </image>
+            </ImageView>
+            <ImageView id="refuseIcon" fx:id="refuseIcon" fitHeight="50.0" fitWidth="50.0" layoutX="275.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/refuseCamera.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane id="cameraPane" fx:id="cameraPaneSecond" prefHeight="500.0" prefWidth="400.0">
+         <children>
+            <ImageView fx:id="friendImageView" fitHeight="514.0" fitWidth="690.0" layoutX="-170.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="myImageView" fitHeight="120.0" fitWidth="184.0" layoutX="265.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="closeIcon1" id="closeIcon1" fitHeight="50.0" fitWidth="50.0" layoutX="175.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/closeCamera.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane id="voicePane" fx:id="voicePane" prefHeight="500.0" prefWidth="400.0">
+         <children>
+            <ImageView id="cameraUserImage1" fx:id="cameraUserImage1" fitHeight="200.0" fitWidth="200.0" layoutX="100.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/jaychou.jpg" />
+               </image>
+               <clip>
+                  <Circle fx:id="circle2" centerX="100" centerY="100" fill="aqua">
+                     <radius>100</radius>
+                  </Circle>
+               </clip>
+            </ImageView>
+            <ImageView fx:id="closeIcon" id="closeIcon" fitHeight="50.0" fitWidth="50.0" layoutX="175.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/closeCamera.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</Pane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.addFriends.AddFriendController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0">
+         <children>
+            <TextField  fx:id="userName"/>
+            <Button id="findFriend" mnemonicParsing="false" text="查找" onAction="#findFriendButton">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="50.0" prefHeight="350.0" prefWidth="300.0">
+         <children>
+            <ListView id="messageList" fx:id="messageList" prefHeight="350.0" prefWidth="250.0" />
+         </children>
+      </HBox>
+   </children>
+   <stylesheets><URL value="@../css/addFriend.css" /></stylesheets>
+</Pane>

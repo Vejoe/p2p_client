@@ -1,0 +1,34 @@
+#findFriend{
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-pref-height: 20px;
+    -fx-pref-width: 40px;
+    -fx-background-color: #00b4fa;
+}
+.list-cell{
+    -fx-padding: 0;
+    -fx-font-family: Arial;
+    -fx-pref-height: 60px;
+}
+.list-cell:empty:hover{
+    -fx-background-color: white;
+}
+.list-cell:even, .list-cell:odd{
+    -fx-background-color: #E0E0E0;
+}
+.list-cell:selected {
+    -fx-background-color: white;
+}
+.list-cell:empty {
+    -fx-background-color: #E0E0E0;;
+}
+.list-cell:filled:selected {
+    -fx-background-color: #C8C8C8 ;
+    -fx-background-insets: 0 ;
+}
+#messageList{
+    -fx-padding: 0;
+    -fx-border-color: #E0E0E0;;
+    -fx-background-insets: 0 ;
+    -fx-border-width: 0;
+}

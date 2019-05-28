@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import java.net.URL?>
+
+<HBox fx:id="hBoxItem" alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="520.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="40.0" prefWidth="353.0">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label id="messageTime" fx:id="messageTime" text="Label">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label id="friendNikeName" fx:id="friendNikeName" text="Label" />
+               </children>
+               <VBox.margin>
+                  <Insets right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextFlow id="rightMessageTextFlow" maxWidth="335.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="23.0" onMouseClicked="#textFlowdoubleClick">
+                     <children>
+                        <Text id="tempText" fx:id="msgText" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView id="tempImage" fx:id="tempImage" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/fileIcon.png" />
+                           </image></ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="3.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="-3.0" />
+                     </HBox.margin>
+                  </TextFlow>
+                  <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets right="10.0" top="4.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../icon/rightsanjiaoxing.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fx:id="imageView" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+         <HBox.margin>
+            <Insets right="20.0" top="5.0" />
+         </HBox.margin>
+
+         <image>
+            <Image url="@../Image/jaychou.jpg" />
+         </image>
+      </ImageView>
+   </children>
+   <stylesheets><URL value="@../css/oneOfChatFrameItem.css" /></stylesheets>
+   <padding>
+      <Insets bottom="5.0" top="5.0" />
+   </padding>
+</HBox>

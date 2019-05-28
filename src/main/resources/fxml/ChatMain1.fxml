@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.chatMain.ChatController">
+   <children>
+      <VBox id="left" alignment="TOP_CENTER" onMouseDragged="#frameDragged" onMousePressed="#frameOnPress" prefHeight="600.0" prefWidth="60.0">
+         <children>
+            <ImageView id="MyIcon" fx:id="MyImage" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#openMyMessage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/jaychou.jpg" />
+               </image>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView id="chatMessageIcon" fx:id="chatMessageIcon" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#chatMessagePress" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/chatMessage.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fx:id="linkManIcon" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#linkManPress" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/linkMan.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView id="addFriends" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#addFriendClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/addFriend.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView id="addGroup" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#addGroupClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/addGroup.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox layoutX="60.0" prefHeight="600.0" prefWidth="250.0">
+         <children>
+            <VBox id="checkFriends" alignment="CENTER" onMouseDragged="#frameDragged" onMousePressed="#frameOnPress" prefHeight="60.0" prefWidth="250.0">
+               <children>
+                  <Label id="tempView" fx:id="tempView" text="Label">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children></VBox>
+            <Pane id="ListWindows" prefHeight="540.0" prefWidth="250.0">
+               <children>
+                  <Pane fx:id="messageListWindow" prefHeight="540.0" prefWidth="250.0">
+                     <children>
+                        <ListView id="messageList" fx:id="messageList" prefHeight="540.0" prefWidth="250.0" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="friendsListWindow" prefHeight="540.0" prefWidth="250.0">
+                     <children>
+                        <ListView id="friendsList" fx:id="friendsList" prefHeight="540.0" prefWidth="250.0" />
+                     </children></Pane>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <VBox layoutX="310.0" prefHeight="600.0" prefWidth="540.0">
+         <children>
+            <HBox alignment="TOP_RIGHT" onMouseDragged="#frameDragged" onMousePressed="#frameOnPress" prefHeight="20.0" prefWidth="540.0" styleClass="titleClass">
+               <children>
+                  <VBox alignment="CENTER" onMouseClicked="#minimumAction" prefHeight="20.0" prefWidth="30.0" styleClass="TitleButton">
+                     <children>
+                        <ImageView fx:id="minimumIcon" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/minimum.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" onMouseClicked="#closeAction" prefHeight="20.0" prefWidth="30.0" styleClass="TitleButton">
+                     <children>
+                        <ImageView fx:id="closeIcon" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/close.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" onMouseDragged="#frameDragged" onMousePressed="#frameOnPress" prefHeight="40.0" prefWidth="200.0" styleClass="titleClass">
+               <children>
+                  <Label id="right_top" fx:id="right_top" alignment="CENTER" onMouseClicked="#rightTopClick">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children></HBox>
+            <Pane prefHeight="540.0" prefWidth="540.0">
+               <children>
+                  <Pane id="acceptMessage" fx:id="acceptMessageWindow" prefHeight="400.0" prefWidth="540.0">
+                     <children>
+                        <ListView id="acceptListView" fx:id="acceptListView" prefHeight="400.0" prefWidth="540.0" />
+                     </children></Pane>
+                  <Pane id="sendMessage" fx:id="sendMessageWindow" layoutY="400.0" prefHeight="140.0" prefWidth="540.0">
+                     <children>
+                        <VBox alignment="TOP_RIGHT" prefHeight="140.0" prefWidth="540.0">
+                           <children>
+                              <TextArea fx:id="send_messageText" prefHeight="115.0" prefWidth="540.0" />
+                              <HBox alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="540.0">
+                                 <children>
+                                    <ImageView id="fileIcon" fx:id="fileIcon" fitHeight="18.0" fitWidth="18.0" onMouseClicked="#fileOnclick" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                       <image>
+                                          <Image url="@../icon/fileIcon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView id="voiceIcon" fx:id="voiceIcon" fitHeight="18.0" fitWidth="18.0" onMouseClicked="#voiceOnclick" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icon/voice.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <ImageView id="captureIcon" fx:id="captureIcon" fitHeight="18.0" fitWidth="18.0" onMouseClicked="#captureOnclick" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icon/capture.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <ImageView fitHeight="20.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#SendMessageAction" prefHeight="20.0" prefWidth="50.0" text="发送" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane id="friendMessageFrame" fx:id="friendMessageShow" prefHeight="540.0" prefWidth="540.0">
+                     <children>
+                        <VBox id="friendMessageVbox" fx:id="friendMessageVbox" alignment="CENTER" prefHeight="540.0" prefWidth="540.0">
+                           <children>
+                              <ImageView id="detailMessage_Image" fx:id="detailMessage_Image" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/jaychou.jpg" />
+                                 </image>
+
+                              </ImageView>
+                              <HBox alignment="CENTER" prefHeight="20.0" prefWidth="540.0">
+                                 <children>
+                                    <Label text="NickName:" />
+                                    <Label id="detailMessage_nickName" fx:id="detailMessage_nickName" text="Label" />
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets top="10.0" />
+                                 </opaqueInsets>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="20.0" prefWidth="540.0">
+                                 <children>
+                                    <Label text="UserName:" />
+                                    <Label id="detailMessage_userName" fx:id="detailMessage_userName" text="Label" />
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets top="5.0" />
+                                 </opaqueInsets>
+                              </HBox>
+                              <Button id="detailMessage_sendButton" mnemonicParsing="false" onAction="#sendToSelectFriend" prefHeight="30.0" prefWidth="150.0" text="发送消息">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin></Button>
+                              <Button id="detailMessage_deleteButton" mnemonicParsing="false" onAction="#deleteSelectFriend" prefHeight="30.0" prefWidth="150.0" text="删除好友">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin></Button>
+                           </children>
+                        </VBox>
+                     </children></Pane>
+                  <Pane id="newFriendFrame" fx:id="newFriendsListWindow" prefHeight="540.0" prefWidth="540.0">
+                     <children>
+                        <ListView fx:id="newFriendsList" prefHeight="540.0" prefWidth="540.0" />
+                     </children></Pane>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets><URL value="@../css/chatMain.css" /></stylesheets>
+</Pane>

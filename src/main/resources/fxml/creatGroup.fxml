@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.creatGroup.CreatGroupController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="300.0">
+         <children>
+            <Label text="GroupName:   " />
+            <TextField fx:id="groupName" prefHeight="23.0" prefWidth="137.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+      <ListView fx:id="friendListView" prefHeight="360.0" prefWidth="300.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </ListView>
+      <Button styleClass="submitButton" fx:id="submitButton" mnemonicParsing="false" onAction="#createGroupAction" prefHeight="20.0" prefWidth="250.0" text="创建群组">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="4.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+   <stylesheets><URL value="@../css/creatGroup.css" /></stylesheets>
+</VBox>

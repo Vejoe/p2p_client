@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.register.RegisterController">
+   <children>
+      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" fx:id="FaceImage">
+         <VBox.margin>
+            <Insets left="110.0" top="30.0" />
+         </VBox.margin>
+         <image>
+            <Image url="@../Image/jaychou.jpg"/>
+         </image>
+         <clip>
+            <Circle fx:id="circle" centerX="50" centerY="50" fill="aqua">
+               <radius>50</radius>
+            </Circle>
+         </clip>
+      </ImageView>
+      <HBox prefHeight="18.0" prefWidth="320.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="19.0" prefWidth="120.0" text="PhotoPath:">
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="PhotoPath" prefHeight="23.0" prefWidth="137.0" />
+            <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="25.0" text="选择" onAction="#selectPhoto"/>
+         </children>
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="18.0" prefWidth="320.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="19.0" prefWidth="120.0" text="NickName:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="NickName" />
+         </children>
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="18.0" prefWidth="320.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="19.0" prefWidth="120.0" text="UserName:">
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="UserName" />
+         </children>
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="18.0" prefWidth="320.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="19.0" prefWidth="120.0" text="PassWord:">
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <PasswordField fx:id="PassWord" />
+         </children>
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="18.0" prefWidth="320.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="19.0" prefWidth="120.0" text="ComfirmPass:">
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <PasswordField fx:id="ComfirmPass" />
+         </children>
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+      </HBox>
+      <Button id="register_button" fx:id="RegisterButton" mnemonicParsing="false" onAction="#registerAction" text="注册">
+         <VBox.margin>
+            <Insets left="85.0" top="20.0" />
+         </VBox.margin></Button>
+   </children>
+   <stylesheets><URL value="@../css/register.css" /></stylesheets>
+
+</VBox>

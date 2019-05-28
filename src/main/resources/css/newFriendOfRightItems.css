@@ -1,0 +1,7 @@
+.button_style{
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-pref-height: 30px;
+    -fx-pref-width: 60px;
+    -fx-background-color: #00b4fa;
+}

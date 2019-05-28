@@ -1,0 +1,13 @@
+.root{
+    -fx-background-color: #fff;
+}
+#register_button{
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-pref-height: 30px;
+    -fx-pref-width: 150px;
+    -fx-background-color: #00b4fa;
+}
+#register_button:hover{
+    -fx-background-color: #23c8fa;
+}

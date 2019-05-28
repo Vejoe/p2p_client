@@ -1,0 +1,46 @@
+package com.domain;
+
+public class NewFriendsVO {
+    private String username;
+    private String nickname;
+    private String remarks;
+    private String request_date_time;
+
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
+    }
+
+    public String getRequest_date_time() {
+        return request_date_time;
+    }
+
+    public void setRequest_date_time(String request_date_time) {
+        this.request_date_time = request_date_time;
+    }
+
+    public NewFriendsVO(){}
+    public NewFriendsVO(String username , String nickname ){
+        this.username = username;
+        this.nickname = nickname;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+}

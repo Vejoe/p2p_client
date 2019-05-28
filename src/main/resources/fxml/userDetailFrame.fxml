@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox onMouseDragged="#frameDragged" onMousePressed="#frameOnPress"  alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.addFriends.UserDetailFrameController">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+         <image>
+            <Image url="@../Image/jaychou.jpg" />
+         </image>
+
+      </ImageView>
+      <HBox alignment="TOP_CENTER" prefHeight="15.0" prefWidth="200.0">
+         <children>
+            <Label text="NickName:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="nickName" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="15.0" prefWidth="200.0">
+         <children>
+            <Label text="UserName:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="userName" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="40.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" styleClass="button_style" text="添加好友"  onAction="#addFrame"/>
+         </children>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="40.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" styleClass="button_style" text="取消" onAction="#cannelFrame"/>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <stylesheets><URL value="@../css/userDetailFrame.css" /></stylesheets>
+</VBox>
